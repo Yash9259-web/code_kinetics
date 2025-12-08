@@ -1,4 +1,5 @@
 let fuelChart = null;
+let trendChart = null;
 
 const benchmarks = {
     fertilizer: 1800,
@@ -73,6 +74,33 @@ function updateCharts(coalCO2, dieselCO2, gasCO2, totalEmission) {
                 borderWidth: 1
             }]
         }
+    });
+
+    
+    const trendCtx = document.getElementById('emissionTrendChart').getContext('2d');
+    if (trendChart) trendChart.destroy();
+    let pastData = [
+        totalEmission * 0.9,
+        totalEmission * 1.1,
+        totalEmission * 0.95,
+        totalEmission * 1.05,
+        totalEmission * 0.85,
+        totalEmission
+    ];
+    trendChart = new Chart(trendCtx, {
+        type: 'line',
+        data: {
+            labels: ['Day 1', 'Day 2', 'Day 3', 'Day 4', 'Day 5', 'Today'],
+            datasets: [{
+                label: 'CO₂ Levels',
+                data: pastData,
+                borderColor: '#2e7d32',
+                backgroundColor: 'rgba(46, 125, 50, 0.2)',
+                fill: true,
+                tension: 0.4
+            }]
+        },
+        options: { scales: { y: { beginAtZero: true } } }
     });
 }
 
