@@ -105,4 +105,24 @@ function updateCharts(coalCO2, dieselCO2, gasCO2, totalEmission) {
 }
 
 function downloadPDF() {
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF();
+
+    doc.setFontSize(18);
+    doc.setTextColor(46, 125, 50);
+    doc.text("EcoTrack Emission Report", 10, 20);
+
+    doc.setFontSize(12);
+    doc.setTextColor(0, 0, 0);
+
+    let content = document.getElementById('resultBox').innerText;
+    let lines = content.split('\n').filter(line => line.trim() !== "");
+
+    let y = 40;
+    lines.forEach(line => {
+        doc.text(line, 10, y);
+        y += 10;
+    });
+
+    doc.save("EcoTrack_Report.pdf");
 }
