@@ -1,4 +1,6 @@
-    const benchmarks = {
+let fuelChart = null;
+
+const benchmarks = {
     fertilizer: 1800,
     polymer: 1400,
     refinery: 2200,
@@ -59,6 +61,19 @@ function calculateCO2() {
 }
 
 function updateCharts(coalCO2, dieselCO2, gasCO2, totalEmission) {
+    const fuelCtx = document.getElementById('fuelBreakdownChart').getContext('2d');
+    if (fuelChart) fuelChart.destroy();
+    fuelChart = new Chart(fuelCtx, {
+        type: 'doughnut',
+        data: {
+            labels: ['Coal', 'Diesel', 'Natural Gas'],
+            datasets: [{
+                data: [coalCO2, dieselCO2, gasCO2],
+                backgroundColor: ['#455a64', '#fb8c00', '#43a047'],
+                borderWidth: 1
+            }]
+        }
+    });
 }
 
 function downloadPDF() {
