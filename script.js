@@ -18,6 +18,11 @@ function calculateCO2() {
         let gasCO2 = gas * gasEF;
 
         let totalEmission = coalCO2 + dieselCO2 + gasCO2;
+        
+        document.getElementById('resultBox').innerHTML = `
+            <div class="result-item"><strong>Plant Profile:</strong> <span>${plant.toUpperCase()}</span></div>
+            <div class="result-item"><strong>Total Emissions:</strong> <span>${totalEmission.toFixed(2)} kg CO₂</span></div>
+        `;
     }
   
 }
