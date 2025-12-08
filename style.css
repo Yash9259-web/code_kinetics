@@ -50,3 +50,13 @@ header h3 {
     box-shadow: 0 4px 15px rgba(46, 125, 50, 0.1);
     border: 1px solid var(--border-color);
 }
+
+.full-width { grid-column: 1 / -1; }
+
+h2 { 
+    margin-top: 0; 
+    font-size: 1.4rem; 
+    color: var(--primary);
+    border-bottom: 2px solid var(--border-color); 
+    padding-bottom: 10px; 
+}
