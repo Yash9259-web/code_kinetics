@@ -101,3 +101,11 @@ button {
     font-size: 1rem;
     transition: all 0.2s ease;
 }
+
+.primary-btn { 
+    background-color: var(--primary); 
+    color: white; 
+    box-shadow: 0 4px 6px rgba(46, 125, 50, 0.3);
+}
+.primary-btn:hover { background-color: var(--primary-hover); transform: translateY(-1px); }
+
