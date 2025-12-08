@@ -109,3 +109,10 @@ button {
 }
 .primary-btn:hover { background-color: var(--primary-hover); transform: translateY(-1px); }
 
+.secondary-btn { 
+    background-color: #546e7a;
+    color: white; 
+}
+.secondary-btn:hover { background-color: #37474f; }
+
+
