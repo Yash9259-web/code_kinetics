@@ -1,1 +1,16 @@
+:root {
+    --primary: #1cba24;
+    --primary-hover: #1e4120;
+    --bg-color: #d7f3d9;
+    --card-bg: #ffffff;
+    --text-color: #183424;
+    --border-color: #96f39a;
+}
 
+body {
+    font-family: 'Segoe UI', 'Roboto', Helvetica, Arial, sans-serif;
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 20px;
+    color: var(--text-color);
+}
