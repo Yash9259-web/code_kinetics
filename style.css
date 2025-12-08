@@ -62,3 +62,22 @@ h2 {
 }
 
 .form-group { margin-bottom: 15px; }
+
+label { 
+    display: block; 
+    margin-bottom: 8px; 
+    font-weight: 600; 
+    font-size: 0.95rem; 
+    color: #2f4f35;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #a5d6a7;
+    border-radius: 8px;
+    background-color: #f1f8e9;
+    box-sizing: border-box;
+    font-size: 1rem;
+    color: var(--text-color);
+}
