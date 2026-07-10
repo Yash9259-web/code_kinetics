@@ -138,11 +138,28 @@ The dashboard provides two visualizations:
 
 ---
 
-## 📸 Preview
+---
 
-<img width="100%" alt="Project Screenshot" src="images/project-preview.png">
+## 📸 Screenshots
 
-*(Replace the image above with an actual screenshot of your application.)*
+### 🏠 Home Page
+The landing page where users can select the plant type, enter fuel consumption details, and initiate CO₂ emission analysis.
+
+![Home Page](images/homepage.PNG)
+
+---
+
+### 📊 Emission Analysis
+Displays the calculated CO₂ emissions, industry benchmark comparison, Green Score, and AI-powered sustainability recommendations.
+
+![Emission Analysis](images/result.PNG)
+
+---
+
+### 📈 Interactive Dashboard
+Visualizes emission data through a fuel source breakdown chart and emission trend graph, enabling better environmental performance analysis.
+
+![Dashboard](images/dashboard.PNG)
 
 ---
 
